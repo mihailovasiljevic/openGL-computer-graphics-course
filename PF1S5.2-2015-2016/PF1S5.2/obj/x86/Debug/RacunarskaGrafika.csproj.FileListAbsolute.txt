@@ -1,0 +1,20 @@
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\3D Models\BMW850\BMW850.3ds
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\3D Models\Lamborgini1\Countach.3ds
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\3D Models\Lamborgini2\MURCIELAGO640.3ds
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\AssimpNetSample.exe
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\AssimpNetSample.pdb
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\AssimpNet.dll
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\Tao.FreeType.dll
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\Tao.OpenGl.dll
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\Tao.Platform.Windows.dll
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\Tao.FreeType.xml
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\Tao.OpenGl.xml
+C:\Users\authorit0\Downloads\PF1S5.2\bin\Debug\Tao.Platform.Windows.xml
+C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.csprojResolveAssemblyReference.cache
+C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.carParkingForm.resources
+C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.Vezbe.AssimpNetSample.Properties.Resources.resources
+C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.csproj.GenerateResource.Cache
+C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\AssimpNetSample.exe
+C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\AssimpNetSample.pdb
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\AssimpNetSample.exe
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\AssimpNetSample.pdb
