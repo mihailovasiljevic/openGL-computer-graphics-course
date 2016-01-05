@@ -18,3 +18,19 @@ C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\AssimpNetSample.exe
 C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\AssimpNetSample.pdb
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\AssimpNetSample.exe
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\AssimpNetSample.pdb
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\BMW850\BMW850.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lamborgini1\Countach.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lamborgini2\MURCIELAGO640.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\AssimpNetSample.exe
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\AssimpNetSample.pdb
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\AssimpNet.dll
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\Tao.FreeType.dll
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\Tao.OpenGl.dll
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\Tao.Platform.Windows.dll
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\Tao.FreeType.xml
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\Tao.OpenGl.xml
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\Tao.Platform.Windows.xml
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.csprojResolveAssemblyReference.cache
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.carParkingForm.resources
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.Vezbe.AssimpNetSample.Properties.Resources.resources
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.csproj.GenerateResource.Cache

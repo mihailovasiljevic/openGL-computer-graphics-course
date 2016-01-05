@@ -65,13 +65,10 @@ namespace RacunarskaGrafika
 
         private void OpenGlControlResize(object sender, EventArgs e)
         {
-            if (m_world != null)
-            {
-                m_world.Height = openGlWorld.Height;
-                m_world.Width = openGlWorld.Width;
-
-                m_world.Resize();
-            }
+            base.OnResize(e);
+            m_world.Height = this.Height;
+            m_world.Width = this.Width;
+            m_world.Resize();
         }
 
         /// <summary>
@@ -100,7 +97,7 @@ namespace RacunarskaGrafika
                 case Keys.D: if (m_world.RotationY == 360) { m_world.RotationY = 0; } m_world.RotationY -= 5.0f; break;
             }
 
-            this.Refresh();
+            openGlWorld.Refresh();
             m_world.Resize();
         }
     }

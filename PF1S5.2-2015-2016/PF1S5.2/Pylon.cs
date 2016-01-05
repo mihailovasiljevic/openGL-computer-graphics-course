@@ -126,6 +126,7 @@ namespace RacunarskaGrafika
             Glu.gluCylinder(gluCylinderObject, m_bottomBase, m_topBase, m_height, 128, 128);
 
             Gl.glTranslatef(0.0f, 0.0f,-1.0f );                              //transliraj prsten za duzinu stubica prema posmatracu da vi mu stojao na vrhu
+            Gl.glRotatef(180.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(0, 191, 255);
             Glu.gluDisk(gluDiskObject, m_innerRadius/4, m_outerRadius/4, 128, 128);
             Gl.glPopMatrix();

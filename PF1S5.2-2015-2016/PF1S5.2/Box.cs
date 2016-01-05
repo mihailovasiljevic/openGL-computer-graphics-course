@@ -94,39 +94,81 @@ namespace RacunarskaGrafika
             Gl.glBegin(Gl.GL_QUADS);
 
             // Zadnja
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3d(-m_width / 2, -m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(-m_width / 2, m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3d(m_width / 2, m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(m_width / 2, -m_height / 2, -m_depth / 2);
 
             // Desna
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3d(m_width / 2, -m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(m_width / 2, m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3d(m_width / 2, m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(m_width / 2, -m_height / 2, m_depth / 2);
 
             // Prednja
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3d(m_width / 2, -m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(m_width / 2, m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3d(-m_width / 2, m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(-m_width / 2, -m_height / 2, m_depth / 2);
 
             // Leva
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3d(-m_width / 2, -m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(-m_width / 2, m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3d(-m_width / 2, m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(-m_width / 2, -m_height / 2, -m_depth / 2);
 
             // Donja
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3d(-m_width / 2, -m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(m_width / 2, -m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3d(m_width / 2, -m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(-m_width / 2, -m_height / 2, m_depth / 2);
 
             // Gornja
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3d(-m_width / 2, m_height / 2, -m_depth / 2);
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(-m_width / 2, m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3d(m_width / 2, m_height / 2, m_depth / 2);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3d(m_width / 2, m_height / 2, -m_depth / 2);
 
             Gl.glEnd();

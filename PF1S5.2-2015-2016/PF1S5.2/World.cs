@@ -222,12 +222,18 @@ namespace RacunarskaGrafika
             // TODO 6: Modelovati zidove oko parkinga, koristeći instance Box klase
             DrawWalls(); //iscrtaj zidove
             DrawModels(); //iscrtaj modele automobila
+            
             // TODO 7: tri vertikalna stubića na ulasku na parking, koristeći gluCylinder i gluDisk objekte
             DrawPylons();
+
+
+            drawLightBulb();
+
+
+
             // TODO 8: Ispisati bitmap tekst zelenom bojom u donjem desnom uglu prozora (redefinisati
             //         projekciju korišćenjem gluOrtho2D metode). Font je Verdana, 14pt, bold.
             DrawText();
-
             Gl.glPopMatrix();
             // kraj iscrtavanja
             Gl.glFlush();
@@ -241,10 +247,10 @@ namespace RacunarskaGrafika
         /// </summary>
         private void Initialize()
         {
-            
+
             // Boja pozadine je bela
-            // Boja pozadine je bela, a boja ispisa je crna
-            Gl.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+            // Boja pozadine je teget, a boja ispisa je crna
+            Gl.glClearColor(0.0f, 0.0f, 0.2588f, 1.0f); // teget boja
             Gl.glColor3ub(0, 145, 45); // poja podloge - zelena
 
             //TODO 1: Uključiti testiranje dubine i sakrivanje nevidljivih površina
@@ -260,6 +266,50 @@ namespace RacunarskaGrafika
                 Gl.glEnable(Gl.GL_CULL_FACE);
             else
                 Gl.glDisable(Gl.GL_CULL_FACE);
+
+            //TODO 2.1: Uključiti color tracking mehanizam i podesiti da se pozivom metode glColor definiše
+            //           ambijentalna i difuzna komponenta materijala.
+
+            // Ukljuci color tracking
+            Gl.glEnable(Gl.GL_COLOR_MATERIAL);
+            // Podesi na koje parametre materijala se odnose pozivi glColor funkcije
+            Gl.glColorMaterial(Gl.GL_FRONT, Gl.GL_AMBIENT_AND_DIFFUSE);
+
+            //TODO 2.2: Definisati tačkasti svetlosni izvor bele boje i pozicionirati ga gore-desno u odnosu na
+            //          centar scene (na pozitivnom delu vertikalne i horizontalne ose). Svetlosni izvor treba da
+            //          bude stacionaran (tj.transformacije nad modelom ne utiču na njega). Definisati normale
+            //          za podlogu, ulicu i garažu. Uključiti normalizaciju.
+
+            //TODO 2.2.1: podesavanje tackastog izvora svetlosti gore desno u odnosu na scenu, izvor je stacionaran
+            float[] ambient = { 0.0f, 0.0f, 0.0f, 1.0f };
+            float[] diffuse = { 1.0f, 1.0f, 1.0f, 1.0f };
+            float[] ambiental = { 0.2f, 0.2f, 0.2f, 1.0f };
+
+            Gl.glLightModelfv(Gl.GL_LIGHT_MODEL_AMBIENT, ambiental);
+
+            // Podesi parametre LIGHT0 svetlosnog izvora (ambijentalnu i difuznu komponentu)
+            //         Podesi svetlosni izvor da bude tackasti
+            Gl.glLightfv(Gl.GL_LIGHT0, Gl.GL_AMBIENT, ambient);
+            Gl.glLightfv(Gl.GL_LIGHT0, Gl.GL_DIFFUSE, diffuse);
+            Gl.glLightf(Gl.GL_LIGHT0, Gl.GL_SPOT_CUTOFF, 180.0f);
+
+            //Kreiraj objekat koji reprezentuje tackasti izvor svetlosti
+            Glu.GLUquadric m_gluObj = Glu.gluNewQuadric();
+            Glu.gluQuadricNormals(m_gluObj, Glu.GLU_SMOOTH);
+
+            //Ukljuci proracun osvetljenja i svetlosni LIGHT0, kao i normalizaciju
+            Gl.glEnable(Gl.GL_LIGHTING);
+            Gl.glEnable(Gl.GL_LIGHT0);
+
+            //TODO 2.2.2: podesavanje normala na podlogu, ulicu i garazu, ukljucivanje normalizacije
+            Gl.glEnable(Gl.GL_NORMALIZE);
+
+            //TODO 2.3: Za teksture podesiti wrapping da bude GL_REPEAT po obema osama. Podesiti filtere za
+            //          teksture da budu linearno filtriranje.Način stapanja teksture sa materijalom postaviti da
+            //          bude GL_ADD.
+            Gl.glTexParameterf(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_S, Gl.GL_REPEAT);
+            Gl.glTexParameterf(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_T, Gl.GL_REPEAT);
+            Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_ADD);
         }
 
 
@@ -300,10 +350,19 @@ namespace RacunarskaGrafika
             Gl.glPushMatrix();
             Gl.glColor3ub(21, 29, 0); // neka braon boja zemljista
             Gl.glBegin(Gl.GL_QUADS);
+
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3f(1000.0f, 0.5f, -1000.0f); // velike vrednosti zato sto je projekciona povrsina dosta udaljena
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3f(-1000.0f, 0.5f, -1000.0f);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3f(-1000.0f, 0.5f, 1000.0f);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3f(1000.0f, 0.5f, 1000.0f);
+
             Gl.glEnd();
             Gl.glPopMatrix();
         }
@@ -314,9 +373,17 @@ namespace RacunarskaGrafika
             Gl.glColor3ub(245, 245, 245); // siva boja
             Gl.glTranslatef(-250.0f, 0.0f, 0.0f); // transliraj u levo 250 da bi sa desne strane bilo mesta za parking
             Gl.glBegin(Gl.GL_QUADS);
+
+            Gl.glNormal3f(0.0f, 0.0f, 1.0f);
             Gl.glVertex3f(250.0f, 10f, -50.0f); // velike vrednosti zato sto je projekciona povrsina dosta udaljena
+
+            Gl.glNormal3f(1.0f, 0.0f, 0.0f);
             Gl.glVertex3f(-250.0f, 10f, -50.0f);
+
+            Gl.glNormal3f(0.0f, 0.0f, -1.0f);
             Gl.glVertex3f(-250.0f, 10f, 1000.0f);
+
+            Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
             Gl.glVertex3f(250.0f, 10f, 1000.0f);
             Gl.glEnd();
             Gl.glPopMatrix();
@@ -401,45 +468,7 @@ namespace RacunarskaGrafika
         }
 
         private void DrawPylons()
-        {/*
-            Glu.GLUquadric gluObject = Glu.gluNewQuadric();
-            //iscrtaj krajni levi stub
-            Gl.glPushMatrix();
-
-            Gl.glColor3ub(255, 255, 0); // zuta boja
-            Gl.glTranslatef(0.0f, 80.0f, 0.0f); 
-            Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
-            Glu.gluCylinder(gluObject, 10, 10, 60, 128, 128);
-            Gl.glPopMatrix();
-
-            //iscrtaj srednji stub
-            Gl.glPushMatrix();
-            Gl.glColor3ub(255, 255, 0); // zuta boja
-            Gl.glTranslatef(0.0f, 80.0f, 250.0f);
-            Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
-            Glu.gluCylinder(gluObject, 10, 10, 60, 128, 128);
-            Gl.glPopMatrix();
-
-            //iscrtaj krajnji desni stub stub
-            Gl.glPushMatrix();
-            Gl.glColor3ub(255, 255, 0); // zuta boja
-            Gl.glTranslatef(0.0f, 80.0f, 500.0f);
-            Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
-            Glu.gluCylinder(gluObject, 10, 10, 60, 128, 128);
-            Gl.glPopMatrix();
-
-            Glu.gluDeleteQuadric(gluObject);
-            
-            Glu.GLUquadric gluObject2 = Glu.gluNewQuadric();
-            Gl.glPushMatrix();
-            Gl.glColor3ub(255, 162, 0); // narandzasta boja
-            Gl.glTranslatef(0.0f,400.0f, 500.0f);
-            //Gl.glRotatef(90.0f, 1.0f, 0.0f,0.0f);
-            Glu.gluDisk(gluObject2, 5f, 10f, 128, 128);
-            Gl.glPopMatrix();
-
-            Glu.gluDeleteQuadric(gluObject2);
-          * */
+        {
             Gl.glPushMatrix();
             Gl.glTranslatef(0.0f, 60.0f, 0.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
@@ -501,7 +530,35 @@ namespace RacunarskaGrafika
             Gl.glPopMatrix();
 
         }
+        private static float[] lightBulbPosition = {1000.0f, 800.0f, -1000.0f, 1.0f };
+        private static float[] emission = new float[4];
+        private static float[] lightBulbColor = { 1.0f, 1.0f, 1.0f, 1.0f }; // bela boja
+        private void drawLightBulb()
+        {
 
+            // Postavi svetlosni izvor na poziciju lightBulbPoistion
+            Gl.glLightfv(Gl.GL_LIGHT0, Gl.GL_POSITION, lightBulbPosition);
+
+            Gl.glGetMaterialfv(Gl.GL_FRONT, Gl.GL_EMISSION, emission);
+            Gl.glMaterialfv(Gl.GL_FRONT, Gl.GL_EMISSION, lightBulbColor);
+
+            // Iskljuci osvetljenje samo za izvor svetlosti
+            Gl.glDisable(Gl.GL_LIGHTING);
+            Glu.GLUquadric gluSphere = Glu.gluNewQuadric();
+            Glu.gluQuadricNormals(gluSphere, Glu.GLU_SMOOTH);
+            Gl.glPushMatrix();
+
+            Gl.glTranslatef(lightBulbPosition[0], lightBulbPosition[1], lightBulbPosition[2]);
+
+            Gl.glColor3ub(255, 255, 255);
+            Glu.gluSphere(gluSphere, 60.0f, 24, 24);
+
+            Gl.glEnable(Gl.GL_LIGHTING);
+            Gl.glMaterialfv(Gl.GL_FRONT, Gl.GL_EMISSION, emission);
+            Gl.glPopMatrix();
+            Glu.gluDeleteQuadric(gluSphere);
+
+        }
         /// <summary>
         ///  Implementacija IDisposable interfejsa.
         /// </summary>
