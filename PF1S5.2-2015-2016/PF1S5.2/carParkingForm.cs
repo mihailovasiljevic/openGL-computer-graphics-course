@@ -25,7 +25,7 @@ namespace RacunarskaGrafika
         /// <summary>
         ///  Instanca OpenGL "sveta" - klase koja je zaduzena za iscrtavanje koriscenjem OpenGL-a.
         /// </summary>
-        World m_world = null;    
+        World m_world = null;
 
         #endregion
 
@@ -45,7 +45,7 @@ namespace RacunarskaGrafika
             //Kreiraj OpenGl svet
             try
             {
-                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\BMW850"), "BMW850.3ds",Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Lamborgini1"), "Countach.3ds",Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Lamborgini2"), "MURCIELAGO640.3ds", openGlWorld.Width, openGlWorld.Height);
+                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\BMW850"), "BMW850.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Lamborgini1"), "Countach.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Lamborgini2"), "MURCIELAGO640.3ds", openGlWorld.Width, openGlWorld.Height);
             }
             catch (Exception ex)
             {
@@ -91,7 +91,7 @@ namespace RacunarskaGrafika
             switch (e.KeyCode)
             {
                 case Keys.F10: this.Close(); break;
-                case Keys.W: if (m_world.RotationX == 360) {m_world.RotationX = 0; } m_world.RotationX += 5.0f; break;
+                case Keys.W: if (m_world.RotationX == 360) { m_world.RotationX = 0; } m_world.RotationX += 5.0f; break;
                 case Keys.S: if (m_world.RotationX == -360) { m_world.RotationX = 0; } m_world.RotationX -= 5.0f; break;
                 case Keys.A: if (m_world.RotationY == 360) { m_world.RotationY = 0; } m_world.RotationY += 5.0f; break;
                 case Keys.D: if (m_world.RotationY == 360) { m_world.RotationY = 0; } m_world.RotationY -= 5.0f; break;
@@ -100,5 +100,7 @@ namespace RacunarskaGrafika
             openGlWorld.Refresh();
             m_world.Resize();
         }
+
+
     }
 }

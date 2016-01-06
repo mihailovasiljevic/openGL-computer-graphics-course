@@ -314,6 +314,9 @@ namespace RacunarskaGrafika
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);
             // Pomeraj objekat po z-osi
             Gl.glPushMatrix();
+            // Kamera
+            Glu.gluLookAt(0.0f, m_sceneDistance/1.5, -m_sceneDistance*1.5, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f);
+
             Gl.glTranslatef(0.0f, 0.0f, -m_sceneDistance);
             Gl.glRotatef(m_xRotation+15, 1.0f, 0.0f, 0.0f); //+5
             Gl.glRotatef(m_yRotation+20, 0.0f, 1.0f, 0.0f); //+20
@@ -542,13 +545,27 @@ namespace RacunarskaGrafika
         private void DrawParking()
         {
             Gl.glPushMatrix();
-            Gl.glColor3ub(245, 245, 245); // siva boja
+            Gl.glBindTexture(Gl.GL_TEXTURE_2D, m_textures[(int)TextureObjects.Parking]);
+
+            //SKALIRANJE
+            /*Gl.glPushAttrib(Gl.GL_CURRENT_BIT);
+            Gl.glMatrixMode(Gl.GL_TEXTURE);
+            Gl.glPushMatrix();
+            Gl.glScalef(1.0f, 1.0f, 6f);
+            Gl.glPopMatrix();
+            Gl.glMatrixMode(Gl.GL_MODELVIEW);
+            Gl.glPopAttrib();
+            */
             Gl.glTranslatef(250.0f, 0.0f, 0.0f); //transliraj u desno 250 da bi izgledao kao da put skrece
 
             Gl.glBegin(Gl.GL_QUADS);
+            Gl.glTexCoord2f(2.0f, 0.0f);
             Gl.glVertex3f(250.0f, 10f, -50.0f); // velike vrednosti zato sto je projekciona povrsina dosta udaljena
+            Gl.glTexCoord2f(2.0f, 1.0f);
             Gl.glVertex3f(-250.0f, 10f, -50.0f);
+            Gl.glTexCoord2f(0.0f,1.0f);
             Gl.glVertex3f(-250.0f, 10f, 500.0f);
+            Gl.glTexCoord2f(0.0f, 0.0f);
             Gl.glVertex3f(250.0f, 10f, 500.0f);
             Gl.glEnd();
             Gl.glPopMatrix();
