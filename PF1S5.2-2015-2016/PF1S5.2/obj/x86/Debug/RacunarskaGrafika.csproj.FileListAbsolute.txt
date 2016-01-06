@@ -34,3 +34,10 @@ D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\P
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.carParkingForm.resources
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.Vezbe.AssimpNetSample.Properties.Resources.resources
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\RacunarskaGrafika.csproj.GenerateResource.Cache
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\asphalt_texture_seamless_by_rfalworth-d6y71cv.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\brick.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\grass.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\Road-Parking Lot.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\steet.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\ground_texture895.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\brickStone.jpg

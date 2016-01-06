@@ -11,6 +11,19 @@ namespace RacunarskaGrafika
     using System.Drawing.Imaging;
     using System.Windows.Forms;
 
+    /// <summary>
+    ///  Nabrojani tip OpenGL rezima filtriranja tekstura
+    /// </summary>
+    public enum TextureFilterMode
+    {
+        Nearest,
+        Linear,
+        NearestMipmapNearest,
+        NearestMipmapLinear,
+        LinearMipmapNearest,
+        LinearMipmapLinear
+    };
+
     public class World : IDisposable
     {
         #region Atributi
@@ -60,6 +73,42 @@ namespace RacunarskaGrafika
         ///	 Identifikator fonta.
         /// </summary>
         private BitmapFont m_font = null;
+
+        /// <summary>
+        ///	 Identifikatori tekstura za jednostavniji pristup teksturama
+        /// </summary>
+        private enum TextureObjects { Brick = 0, Road, Parking, Grass };
+        private readonly int m_textureCount = Enum.GetNames(typeof(TextureObjects)).Length;
+
+        /// <summary>
+        ///	 Identifikatori OpenGL tekstura
+        /// </summary>
+        private int[] m_textures = null;
+
+
+        private string grassPath = Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "grass.png");
+        private string roadPath = Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "asphalt_texture_seamless_by_rfalworth-d6y71cv.jpg");
+        private string parkingPath = Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "Road-Parking Lot.png");
+        private string brickPath = Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "brick.jpg");
+        /// <summary>
+        ///	 Putanje do slika koje se koriste za teksture
+        /// </summary>
+        private string[] m_textureFiles = {
+            Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "brick.jpg"),
+            Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "asphalt_texture_seamless_by_rfalworth-d6y71cv.jpg"),
+           Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "Road-Parking Lot.png"),
+            Path.Combine(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "images"), "ground_texture895.jpg") };
+
+        /// <summary>
+        ///  Izabrana OpenGL mehanizam za iscrtavanje.
+        /// </summary>
+        private TextureFilterMode m_selectedMode = TextureFilterMode.Nearest;
+
+        /// <summary>
+        ///  Pomeraj po Z osi
+        /// </summary>
+        private float m_zPosition = -60.0f;
+
 
         #endregion
 
@@ -155,6 +204,60 @@ namespace RacunarskaGrafika
             set { m_xRotation = value; }
         }
 
+
+        /// <summary>
+        ///  Izabrani OpenGL rezim stapanja teksture sa materijalom
+        /// </summary>
+        public TextureFilterMode SelectedMode
+        {
+            get { return m_selectedMode; }
+            set
+            {
+                m_selectedMode = value;
+
+                foreach (int textureId in m_textures)
+                {
+                    Gl.glBindTexture(Gl.GL_TEXTURE_2D, textureId);
+
+                    switch (m_selectedMode)
+                    {
+                        case TextureFilterMode.Nearest:
+                            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_NEAREST);
+                            break;
+
+                        case TextureFilterMode.Linear:
+                            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_LINEAR);
+                            break;
+
+                        case TextureFilterMode.NearestMipmapNearest:
+                            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_NEAREST_MIPMAP_NEAREST);
+                            break;
+
+                        case TextureFilterMode.NearestMipmapLinear:
+                            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_NEAREST_MIPMAP_LINEAR);
+                            break;
+
+                        case TextureFilterMode.LinearMipmapNearest:
+                            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_LINEAR_MIPMAP_NEAREST);
+                            break;
+
+                        case TextureFilterMode.LinearMipmapLinear:
+                            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_LINEAR_MIPMAP_LINEAR);
+                            //Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MAG_FILTER, Gl.GL_LINEAR_MIPMAP_LINEAR);
+                            break;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        ///	 Ugao rotacije sveta oko X ose.
+        /// </summary>
+        public float PositionZ
+        {
+            get { return m_zPosition; }
+            set { m_zPosition = value; }
+        }
         #endregion
 
         #region Konstruktori
@@ -175,6 +278,7 @@ namespace RacunarskaGrafika
             try
             {
                 m_font = new BitmapFont("Verdana", 14, true, false, false, false);
+                m_textures = new int[m_textureCount];
             }
             catch (Exception)
             {
@@ -183,10 +287,10 @@ namespace RacunarskaGrafika
 
 
             //Korisnicka inicijalizacija OpenGL parametara
-            this.Initialize();
+            Initialize();
 
             //Inicijalno podesavanje projekcije i viewport-a
-            this.Resize();
+            Resize();
         }
 
         /// <summary>
@@ -307,9 +411,40 @@ namespace RacunarskaGrafika
             //TODO 2.3: Za teksture podesiti wrapping da bude GL_REPEAT po obema osama. Podesiti filtere za
             //          teksture da budu linearno filtriranje.Način stapanja teksture sa materijalom postaviti da
             //          bude GL_ADD.
+            Gl.glEnable(Gl.GL_TEXTURE_2D);
             Gl.glTexParameterf(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_S, Gl.GL_REPEAT);
             Gl.glTexParameterf(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_T, Gl.GL_REPEAT);
             Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_ADD);
+
+            //TODO 2.4:Zidovima oko parkinga pridružiti teksturu zida od cigle. Ulici pridružiti teksturu asfalta.
+            //         Definisati koordinate tekstura.
+            //TODO 2.5:Parkingu pridružiti teksturu parkinga sa izvučenim linijama (slika koja se koristi je jedan
+            //         segment parkinga). Pritom obavezno skalirati teksture (shodno potrebi). Skalirati teksture
+            //         korišćenjem Texture matrice.Definisati koordinate teksture.
+
+            // Ucitaj slike i kreiraj teksture
+            Gl.glGenTextures(m_textureCount, m_textures);
+            for (int i = 0; i < m_textureCount; ++i)
+            {
+                // Pridruzi teksturu odgovarajucem identifikatoru
+                Gl.glBindTexture(Gl.GL_TEXTURE_2D, m_textures[i]);
+
+                // Ucitaj sliku i podesi parametre teksture
+                Bitmap image = new Bitmap(m_textureFiles[i]);
+                // rotiramo sliku zbog koordinantog sistema opengl-a
+                image.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                Rectangle rect = new Rectangle(0, 0, image.Width, image.Height);
+                // RGBA format (dozvoljena providnost slike tj. alfa kanal)
+                BitmapData imageData = image.LockBits(rect, System.Drawing.Imaging.ImageLockMode.ReadOnly,
+                                                      System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+
+                Glu.gluBuild2DMipmaps(Gl.GL_TEXTURE_2D, (int)Gl.GL_RGBA8, image.Width, image.Height, Gl.GL_BGRA, Gl.GL_UNSIGNED_BYTE, imageData.Scan0);
+                Gl.glTexParameteri((int)Gl.GL_TEXTURE_2D, (int)Gl.GL_TEXTURE_MIN_FILTER, (int)Gl.GL_LINEAR);		// Linear Filtering
+                Gl.glTexParameteri((int)Gl.GL_TEXTURE_2D, (int)Gl.GL_TEXTURE_MAG_FILTER, (int)Gl.GL_LINEAR_MIPMAP_LINEAR);		// Linear Filtering
+
+                image.UnlockBits(imageData);
+                image.Dispose();
+            }
         }
 
 
@@ -346,21 +481,27 @@ namespace RacunarskaGrafika
 
         private void DrawBase()
         {
-            
+
             Gl.glPushMatrix();
-            Gl.glColor3ub(21, 29, 0); // neka braon boja zemljista
+            
+            // Gl.glColor3ub(21, 29, 0); // neka braon boja zemljista
+            Gl.glBindTexture(Gl.GL_TEXTURE_2D, m_textures[(int)TextureObjects.Grass]);
             Gl.glBegin(Gl.GL_QUADS);
 
             Gl.glNormal3f(0.0f, 0.0f, 1.0f);
+            Gl.glTexCoord2f(1.0f, 0.0f);
             Gl.glVertex3f(1000.0f, 0.5f, -1000.0f); // velike vrednosti zato sto je projekciona povrsina dosta udaljena
 
             Gl.glNormal3f(1.0f, 0.0f, 0.0f);
+            Gl.glTexCoord2f(1.0f, 1.0f);
             Gl.glVertex3f(-1000.0f, 0.5f, -1000.0f);
 
             Gl.glNormal3f(0.0f, 0.0f, -1.0f);
+            Gl.glTexCoord2f(0.0f, 1.0f);
             Gl.glVertex3f(-1000.0f, 0.5f, 1000.0f);
 
             Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
+            Gl.glTexCoord2f(0.0f, 0.0f);
             Gl.glVertex3f(1000.0f, 0.5f, 1000.0f);
 
             Gl.glEnd();
@@ -369,24 +510,33 @@ namespace RacunarskaGrafika
 
         private void DrawStreet()
         {
+
+
+
             Gl.glPushMatrix();
-            Gl.glColor3ub(245, 245, 245); // siva boja
+            Gl.glBindTexture(Gl.GL_TEXTURE_2D, m_textures[(int)TextureObjects.Road]);
             Gl.glTranslatef(-250.0f, 0.0f, 0.0f); // transliraj u levo 250 da bi sa desne strane bilo mesta za parking
             Gl.glBegin(Gl.GL_QUADS);
 
             Gl.glNormal3f(0.0f, 0.0f, 1.0f);
+            Gl.glTexCoord2f(1.0f, 0.0f);
             Gl.glVertex3f(250.0f, 10f, -50.0f); // velike vrednosti zato sto je projekciona povrsina dosta udaljena
 
             Gl.glNormal3f(1.0f, 0.0f, 0.0f);
+            Gl.glTexCoord2f(1.0f, 1.0f);
             Gl.glVertex3f(-250.0f, 10f, -50.0f);
 
             Gl.glNormal3f(0.0f, 0.0f, -1.0f);
+            Gl.glTexCoord2f(0.0f, 1.0f);
             Gl.glVertex3f(-250.0f, 10f, 1000.0f);
 
             Gl.glNormal3f(-1.0f, 0.0f, 0.0f);
+            Gl.glTexCoord2f(0.0f, 0.0f);
             Gl.glVertex3f(250.0f, 10f, 1000.0f);
             Gl.glEnd();
             Gl.glPopMatrix();
+
+
         }
 
         private void DrawParking()
@@ -574,6 +724,7 @@ namespace RacunarskaGrafika
             m_lamborgini1.Dispose();
             m_lamborgini2.Dispose();
             m_font.Dispose();
+            Terminate();
         }
 
         #endregion
@@ -589,6 +740,14 @@ namespace RacunarskaGrafika
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        ///  Korisnicko oslobadjanje OpenGL resursa.
+        /// </summary>
+        private void Terminate()
+        {
+            Gl.glDeleteTextures(m_textureCount, m_textures);
+        }
         #endregion IDisposable metode
+
     }
 }
