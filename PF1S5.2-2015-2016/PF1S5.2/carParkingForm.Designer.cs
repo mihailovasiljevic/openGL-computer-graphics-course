@@ -32,6 +32,12 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.openGlWorld = new Tao.Platform.Windows.SimpleOpenGlControl();
+            this.btnPonistiSveIzmene = new System.Windows.Forms.Button();
+            this.tbPomeriDrugi = new System.Windows.Forms.TrackBar();
+            this.lblPomeriDrugi = new System.Windows.Forms.Label();
+            this.tbPomeriPrvi = new System.Windows.Forms.TrackBar();
+            this.lblPomeriPrvi = new System.Windows.Forms.Label();
+            this.lblPomeranjeAutomobila = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIzborBoje = new System.Windows.Forms.Button();
@@ -40,19 +46,13 @@
             this.lblVertikalniStubiic = new System.Windows.Forms.Label();
             this.tbVisinaStubica = new System.Windows.Forms.TrackBar();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.lblPomeranjeAutomobila = new System.Windows.Forms.Label();
-            this.lblPomeriPrvi = new System.Windows.Forms.Label();
-            this.tbPomeriPrvi = new System.Windows.Forms.TrackBar();
-            this.tbPomeriDrugi = new System.Windows.Forms.TrackBar();
-            this.lblPomeriDrugi = new System.Windows.Forms.Label();
-            this.btnPonistiSveIzmene = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbVisinaStubica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPomeriPrvi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPomeriDrugi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPomeriPrvi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbVisinaStubica)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -104,6 +104,59 @@
             this.openGlWorld.Paint += new System.Windows.Forms.PaintEventHandler(this.OpenGlControlPaint);
             this.openGlWorld.KeyDown += new System.Windows.Forms.KeyEventHandler(this.openGlWorld_KeyDown);
             this.openGlWorld.Resize += new System.EventHandler(this.OpenGlControlResize);
+            // 
+            // btnPonistiSveIzmene
+            // 
+            this.btnPonistiSveIzmene.BackColor = System.Drawing.Color.Red;
+            this.btnPonistiSveIzmene.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPonistiSveIzmene.ForeColor = System.Drawing.Color.White;
+            this.btnPonistiSveIzmene.Location = new System.Drawing.Point(25, 323);
+            this.btnPonistiSveIzmene.Name = "btnPonistiSveIzmene";
+            this.btnPonistiSveIzmene.Size = new System.Drawing.Size(189, 32);
+            this.btnPonistiSveIzmene.TabIndex = 12;
+            this.btnPonistiSveIzmene.Text = "Poništi sve izmene";
+            this.btnPonistiSveIzmene.UseVisualStyleBackColor = false;
+            // 
+            // tbPomeriDrugi
+            // 
+            this.tbPomeriDrugi.Location = new System.Drawing.Point(127, 269);
+            this.tbPomeriDrugi.Name = "tbPomeriDrugi";
+            this.tbPomeriDrugi.Size = new System.Drawing.Size(87, 45);
+            this.tbPomeriDrugi.TabIndex = 11;
+            // 
+            // lblPomeriDrugi
+            // 
+            this.lblPomeriDrugi.AutoSize = true;
+            this.lblPomeriDrugi.Location = new System.Drawing.Point(56, 276);
+            this.lblPomeriDrugi.Name = "lblPomeriDrugi";
+            this.lblPomeriDrugi.Size = new System.Drawing.Size(65, 13);
+            this.lblPomeriDrugi.TabIndex = 10;
+            this.lblPomeriDrugi.Text = "Pomeri drugi";
+            // 
+            // tbPomeriPrvi
+            // 
+            this.tbPomeriPrvi.Location = new System.Drawing.Point(127, 227);
+            this.tbPomeriPrvi.Name = "tbPomeriPrvi";
+            this.tbPomeriPrvi.Size = new System.Drawing.Size(87, 45);
+            this.tbPomeriPrvi.TabIndex = 9;
+            // 
+            // lblPomeriPrvi
+            // 
+            this.lblPomeriPrvi.AutoSize = true;
+            this.lblPomeriPrvi.Location = new System.Drawing.Point(63, 237);
+            this.lblPomeriPrvi.Name = "lblPomeriPrvi";
+            this.lblPomeriPrvi.Size = new System.Drawing.Size(59, 13);
+            this.lblPomeriPrvi.TabIndex = 8;
+            this.lblPomeriPrvi.Text = "Pomeri prvi";
+            // 
+            // lblPomeranjeAutomobila
+            // 
+            this.lblPomeranjeAutomobila.AutoSize = true;
+            this.lblPomeranjeAutomobila.Location = new System.Drawing.Point(21, 207);
+            this.lblPomeranjeAutomobila.Name = "lblPomeranjeAutomobila";
+            this.lblPomeranjeAutomobila.Size = new System.Drawing.Size(105, 13);
+            this.lblPomeranjeAutomobila.TabIndex = 7;
+            this.lblPomeranjeAutomobila.Text = "Pomeranje autombila";
             // 
             // panel2
             // 
@@ -162,59 +215,7 @@
             this.tbVisinaStubica.Name = "tbVisinaStubica";
             this.tbVisinaStubica.Size = new System.Drawing.Size(196, 45);
             this.tbVisinaStubica.TabIndex = 0;
-            // 
-            // lblPomeranjeAutomobila
-            // 
-            this.lblPomeranjeAutomobila.AutoSize = true;
-            this.lblPomeranjeAutomobila.Location = new System.Drawing.Point(21, 207);
-            this.lblPomeranjeAutomobila.Name = "lblPomeranjeAutomobila";
-            this.lblPomeranjeAutomobila.Size = new System.Drawing.Size(105, 13);
-            this.lblPomeranjeAutomobila.TabIndex = 7;
-            this.lblPomeranjeAutomobila.Text = "Pomeranje autombila";
-            // 
-            // lblPomeriPrvi
-            // 
-            this.lblPomeriPrvi.AutoSize = true;
-            this.lblPomeriPrvi.Location = new System.Drawing.Point(63, 237);
-            this.lblPomeriPrvi.Name = "lblPomeriPrvi";
-            this.lblPomeriPrvi.Size = new System.Drawing.Size(59, 13);
-            this.lblPomeriPrvi.TabIndex = 8;
-            this.lblPomeriPrvi.Text = "Pomeri prvi";
-            // 
-            // tbPomeriPrvi
-            // 
-            this.tbPomeriPrvi.Location = new System.Drawing.Point(127, 227);
-            this.tbPomeriPrvi.Name = "tbPomeriPrvi";
-            this.tbPomeriPrvi.Size = new System.Drawing.Size(87, 45);
-            this.tbPomeriPrvi.TabIndex = 9;
-            // 
-            // tbPomeriDrugi
-            // 
-            this.tbPomeriDrugi.Location = new System.Drawing.Point(127, 269);
-            this.tbPomeriDrugi.Name = "tbPomeriDrugi";
-            this.tbPomeriDrugi.Size = new System.Drawing.Size(87, 45);
-            this.tbPomeriDrugi.TabIndex = 11;
-            // 
-            // lblPomeriDrugi
-            // 
-            this.lblPomeriDrugi.AutoSize = true;
-            this.lblPomeriDrugi.Location = new System.Drawing.Point(56, 276);
-            this.lblPomeriDrugi.Name = "lblPomeriDrugi";
-            this.lblPomeriDrugi.Size = new System.Drawing.Size(65, 13);
-            this.lblPomeriDrugi.TabIndex = 10;
-            this.lblPomeriDrugi.Text = "Pomeri drugi";
-            // 
-            // btnPonistiSveIzmene
-            // 
-            this.btnPonistiSveIzmene.BackColor = System.Drawing.Color.Red;
-            this.btnPonistiSveIzmene.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPonistiSveIzmene.ForeColor = System.Drawing.Color.White;
-            this.btnPonistiSveIzmene.Location = new System.Drawing.Point(25, 323);
-            this.btnPonistiSveIzmene.Name = "btnPonistiSveIzmene";
-            this.btnPonistiSveIzmene.Size = new System.Drawing.Size(189, 32);
-            this.btnPonistiSveIzmene.TabIndex = 12;
-            this.btnPonistiSveIzmene.Text = "Poništi sve izmene";
-            this.btnPonistiSveIzmene.UseVisualStyleBackColor = false;
+            this.tbVisinaStubica.Scroll += new System.EventHandler(this.tbVisinaStubica_Scroll);
             // 
             // carParkingForm
             // 
@@ -230,9 +231,9 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbVisinaStubica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPomeriPrvi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPomeriDrugi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPomeriPrvi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbVisinaStubica)).EndInit();
             this.ResumeLayout(false);
 
         }

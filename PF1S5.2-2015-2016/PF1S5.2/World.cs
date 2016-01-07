@@ -27,6 +27,12 @@ namespace RacunarskaGrafika
     public class World : IDisposable
     {
         #region Atributi
+
+        /// <summary>
+        ///	 Visina vertikalnih stubica.
+        /// </summary>
+        private int pylonHeight;
+
         /// <summary>
         ///	 Scena koja se prikazuje.
         /// </summary>
@@ -113,6 +119,15 @@ namespace RacunarskaGrafika
         #endregion
 
         #region Properties
+
+        /// <summary>
+        ///	 Visina vertikalnih stubica.
+        /// </summary>
+        public int PylonHeight
+        {
+            get { return pylonHeight; }
+            set { pylonHeight = value; }
+        }
 
         /// <summary>
         ///	 Sirina OpenGL kontrole u pikselima.
@@ -274,7 +289,7 @@ namespace RacunarskaGrafika
             this.m_lamborgini2 = new AssimpScene(lamborgini2Path, lamborgini2FileName);
             this.m_height = height;
             this.m_width = width;
-
+            this.pylonHeight = 0;
             try
             {
                 m_font = new BitmapFont("Verdana", 14, true, false, false, false);
@@ -637,26 +652,26 @@ namespace RacunarskaGrafika
         private void DrawPylons()
         {
             Gl.glPushMatrix();
-            Gl.glTranslatef(0.0f, 60.0f, 0.0f);
+            Gl.glTranslatef(0.0f, pylonHeight + 12, 0.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
-            Pylon leftPylon = new Pylon(10, 10, 60, 5, 60);
+            Pylon leftPylon = new Pylon(10, 10, pylonHeight, 5, 60);
             leftPylon.Draw();
             Gl.glPopMatrix();
 
             Gl.glPushMatrix();
-            Gl.glTranslatef(0.0f, 60.0f, 250.0f);
+            Gl.glTranslatef(0.0f, pylonHeight +12, 250.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
-            Pylon centerPylon = new Pylon(10, 10, 60, 5, 60);
+            Pylon centerPylon = new Pylon(10, 10, pylonHeight, 5, 60);
             centerPylon.Draw();
             Gl.glPopMatrix();
 
             Gl.glPushMatrix();
-            Gl.glTranslatef(0.0f, 60.0f, 460.0f);
+            Gl.glTranslatef(0.0f, pylonHeight + 12, 460.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
-            Pylon rightPylon = new Pylon(10, 10, 60, 5, 60);
+            Pylon rightPylon = new Pylon(10, 10, pylonHeight, 5, 60);
             rightPylon.Draw();
             Gl.glPopMatrix();
         }

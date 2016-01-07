@@ -101,6 +101,11 @@ namespace RacunarskaGrafika
             m_world.Resize();
         }
 
-
+        private void tbVisinaStubica_Scroll(object sender, EventArgs e)
+        {
+            m_world.PylonHeight = 6 * (tbVisinaStubica.Value);
+            openGlWorld.Refresh();
+            m_world.Resize();
+        }
     }
 }
