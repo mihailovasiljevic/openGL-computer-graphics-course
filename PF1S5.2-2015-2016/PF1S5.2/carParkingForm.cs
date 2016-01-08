@@ -45,7 +45,7 @@ namespace RacunarskaGrafika
             //Kreiraj OpenGl svet
             try
             {
-                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\RollsRoyce"), "RollsRoyce.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\LEG_CAR_B1"), "LEGO_CAR_B1.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\RollsRoyce"), "RollsRoyce.3ds", openGlWorld.Width, openGlWorld.Height);
+                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\RollsRoyce"), "RollsRoyce.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\LEG_CAR_B1"), "LEGO_CAR_B1.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\M5"), "Car BMW M5 N071210.3DS", openGlWorld.Width, openGlWorld.Height);
             }
             catch (Exception ex)
             {

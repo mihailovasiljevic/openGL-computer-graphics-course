@@ -46,19 +46,92 @@ D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\P
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\LEG_CAR_B1\LEGO_CAR_B1.obj
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\LEG_CAR_B1\LEGO_CAR_B1.3ds
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\RollsRoyce\RollsRoyce.3ds
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\11081-normal.jpg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\29034.jpg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\AR8-CF-796_c-600x600.jpg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\back.png
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\Carbonfiber.jpg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\discbrake_alpha.png
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\Grill_alpha.jpg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\Pedals.png
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\r8_nav.jpg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_trail_light.jpeg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\thief-number-plate.jpg
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.3ds
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.blend
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.mtl
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.obj
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\zmwgznhn7p4w-RollsRoyce_GabrielSDJ.rar
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\441374894_bff13d26c8.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\441374894_bff13d26c8.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\ford-thunderbird57.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\ford-thunderbird57.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\fordDerriere.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\fordFace.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\fordHaut.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\fordProfile.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\ford_thunerbird.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\sculture_pneu.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\tumblr_mron4qYHaN1rhi6xto1_1280.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\tumblr_mrwhlwvuZv1rhi6xto1_1280.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford textures\v8.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford-thunderbird57.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford-thunderbird57.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Ford21957.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Ford31957.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Ford41957.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Ford6.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Ford7.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Ford8.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\fordDerriere.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\fordFace.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\fordHaut.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\fordProfile.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\ford_thunerbird.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\sculture_pneu.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\tumblr_mron4qYHaN1rhi6xto1_1280.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\tumblr_mrwhlwvuZv1rhi6xto1_1280.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\v8.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Fordtest1957.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Fordtest1957.blend
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Fordtest1957.blend1
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Fordtest1957.mtl
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Ford\Fordtest1957.obj
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\compteurl.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\feuxblanc2.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\feuxl.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\feuxld.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\LCD.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\logo_av.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\pendule.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\phare_orange.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\Pneusc.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\stop.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\TIRE.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\TIRE2.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\VLKN.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\volant2.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\Wood.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\Lincoln Navigator.lwo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\navigator.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\navigator.max
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\navigator.mb
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\navigator.mtl
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\navigator.obj
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\navigator_2009.max
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\Scene L N 1.lws
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\Scene L N 2.lws
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lincoln\Sol.lwo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\010.bmp
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\011 Bump.bmp
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\011.bmp
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\1 num.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\archibase.net.txt
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\Bumb_Textur_Fary_3.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\ch12_14.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\ch12_14_back 2.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\ch12_34.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\Nomer.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\bumper_frame.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\buttons.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\CHROME_BODY.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\chrome_hard.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.mtl
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.obj
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari_Logo.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Freio(2).tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\gauge_monitor.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\grill.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\interior_lod0.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\km.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\lights.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\nodamage.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\tire.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\undercarriage.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\Car BMW M5 N071210.3DS

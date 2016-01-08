@@ -284,8 +284,8 @@ namespace RacunarskaGrafika
         /// <param name="height">Sirina OpenGL kontrole u pikselima.</param>
         public World(String bmwPath, String bmwFileName, String lamborgini1Path, String lamborgini1FileName, String lamborgini2Path, String lamborgini2FileName, int width, int height)
         {
-            this.m_bmw = new AssimpScene(bmwPath, bmwFileName);
-            this.m_lamborgini1 = new AssimpScene(lamborgini1Path, lamborgini1FileName);
+             this.m_bmw = new AssimpScene(bmwPath, bmwFileName);
+             this.m_lamborgini1 = new AssimpScene(lamborgini1Path, lamborgini1FileName);
             this.m_lamborgini2 = new AssimpScene(lamborgini2Path, lamborgini2FileName);
             this.m_height = height;
             this.m_width = width;
@@ -343,7 +343,7 @@ namespace RacunarskaGrafika
             DrawParking(); // iscrtaj parking
             // TODO 6: Modelovati zidove oko parkinga, koristeći instance Box klase
             DrawWalls(); //iscrtaj zidove
-            DrawModels(); //iscrtaj modele automobila
+           DrawModels(); //iscrtaj modele automobila
             
             // TODO 7: tri vertikalna stubića na ulasku na parking, koristeći gluCylinder i gluDisk objekte
             DrawPylons();
@@ -351,7 +351,7 @@ namespace RacunarskaGrafika
 
             drawLightBulb();
 
-
+            drawParkingLightSource();
 
             // TODO 8: Ispisati bitmap tekst zelenom bojom u donjem desnom uglu prozora (redefinisati
             //         projekciju korišćenjem gluOrtho2D metode). Font je Verdana, 14pt, bold.
@@ -463,6 +463,12 @@ namespace RacunarskaGrafika
                 image.UnlockBits(imageData);
                 image.Dispose();
             }
+
+            //TODO 2.9 Definisati reflektorski svetlosni izvor (cut-off=35º) žute boje iznad uparkiranih automobila
+            float[] smer = { 0.0f, -1.0f, 0.0f };
+            Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_SPOT_DIRECTION, smer);
+            Gl.glLightf(Gl.GL_LIGHT1, Gl.GL_SPOT_CUTOFF, 35.0f);
+            Gl.glEnable(Gl.GL_LIGHT1);
         }
 
 
@@ -622,7 +628,7 @@ namespace RacunarskaGrafika
             //        automobila. Ukoliko je model podeljen u nekoliko fajlova, potrebno ih je sve učitati i
             //        iscrtati. Skalirati modele, ukoliko je neophodno, tako da u celosti budu vidljivi.
             // Konstruktor World klase prima po 2 parametra kojim se ucitavaju modeli
-
+            Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_MODULATE);
             //iscrtaj BMW850
             Gl.glPushMatrix();
             Gl.glTranslatef(-380f, 20.0f, 10.0f); // udalji objekat od kamere da bi se video ceo
@@ -641,12 +647,12 @@ namespace RacunarskaGrafika
 
             //iscrtaj Lamborgini Murcielago 640
             Gl.glPushMatrix();
-            Gl.glTranslatef(180f, 20f, 250f); // udalji objekat od kamere da bi se video ceo
+            Gl.glTranslatef(-330f, 60f, 150f); // udalji objekat od kamere da bi se video ceo
             Gl.glRotatef(180.0f, 0.0f, 1.0f, 0.0f);
-            Gl.glScalef(55f,55f, 55f);
+            Gl.glScalef(1.3f,1.3f, 1.3f);
             m_lamborgini2.Draw();
             Gl.glPopMatrix();
-            
+            Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_ADD);
         }
 
         private void DrawPylons()
@@ -741,6 +747,32 @@ namespace RacunarskaGrafika
             Glu.gluDeleteQuadric(gluSphere);
 
         }
+        private static float[] parkingLightSourcePosition = { 300.0f, 400.0f, 200.0f, 1.0f };
+        private static float[] parkingLightSourceColor = { 1.0f, 1.0f, 0.0f, 1.0f }; // bela boja
+        private void drawParkingLightSource()
+        {
+            // Postavi svetlosni izvor na poziciju lightBulbPoistion
+            Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_POSITION, parkingLightSourcePosition);
+
+            Gl.glGetMaterialfv(Gl.GL_FRONT, Gl.GL_EMISSION, emission);
+            Gl.glMaterialfv(Gl.GL_FRONT, Gl.GL_EMISSION, parkingLightSourceColor);
+
+            // Iskljuci osvetljenje samo za izvor svetlosti
+            Gl.glDisable(Gl.GL_LIGHTING);
+            Glu.GLUquadric gluSphere = Glu.gluNewQuadric();
+            Glu.gluQuadricNormals(gluSphere, Glu.GLU_SMOOTH);
+            Gl.glPushMatrix();
+
+            Gl.glTranslatef(parkingLightSourcePosition[0], parkingLightSourcePosition[1], parkingLightSourcePosition[2]);
+
+            Gl.glColor3ub(255, 255, 0);
+            Glu.gluSphere(gluSphere, 20.0f, 24, 24);
+
+            Gl.glEnable(Gl.GL_LIGHTING);
+            Gl.glMaterialfv(Gl.GL_FRONT, Gl.GL_EMISSION, emission);
+            Gl.glPopMatrix();
+            Glu.gluDeleteQuadric(gluSphere);
+        }
         /// <summary>
         ///  Implementacija IDisposable interfejsa.
         /// </summary>
@@ -753,8 +785,8 @@ namespace RacunarskaGrafika
 
             // Oslobodi unmanaged resurse
             m_bmw.Dispose();
-            m_lamborgini1.Dispose();
-            m_lamborgini2.Dispose();
+           m_lamborgini1.Dispose();
+           m_lamborgini2.Dispose();
             m_font.Dispose();
             Terminate();
         }
