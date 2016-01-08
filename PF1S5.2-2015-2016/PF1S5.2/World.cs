@@ -330,7 +330,7 @@ namespace RacunarskaGrafika
             // Pomeraj objekat po z-osi
             Gl.glPushMatrix();
             // Kamera
-            Glu.gluLookAt(0.0f, m_sceneDistance/1.5, -m_sceneDistance*1.5, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f);
+            Glu.gluLookAt(m_sceneDistance / 1.5, m_sceneDistance/1.5, -m_sceneDistance*1.5, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f);
 
             Gl.glTranslatef(0.0f, 0.0f, -m_sceneDistance);
             Gl.glRotatef(m_xRotation+15, 1.0f, 0.0f, 0.0f); //+5
@@ -625,17 +625,17 @@ namespace RacunarskaGrafika
 
             //iscrtaj BMW850
             Gl.glPushMatrix();
-            Gl.glTranslatef(380f, 20.0f, 300.0f); // udalji objekat od kamere da bi se video ceo
-            Gl.glRotatef(45.0f, 0.0f, 1.0f, 0.0f);
-            Gl.glScalef(3f, 3f, 3f);
+            Gl.glTranslatef(-380f, 20.0f, 10.0f); // udalji objekat od kamere da bi se video ceo
+            Gl.glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+            Gl.glScalef(45f, 45f,45f);
             m_bmw.Draw();
             Gl.glPopMatrix();
 
             //iscrtaj Lamborgini Countach
             Gl.glPushMatrix();
-            Gl.glTranslatef(-400f, 60.0f, 350.0f); // udalji objekat od kamere da bi se video ceo
+            Gl.glTranslatef(330f, 20.0f, 220.0f); // udalji objekat od kamere da bi se video ceo
             Gl.glRotatef(0.0f, 0.0f, 1.0f, 0.0f);
-            Gl.glScalef(1.8f, 1.8f, 1.8f);
+            Gl.glScalef(0.6f, 0.6f, 0.6f);
             m_lamborgini1.Draw();
             Gl.glPopMatrix();
 

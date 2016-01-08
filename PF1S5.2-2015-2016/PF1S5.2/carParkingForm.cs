@@ -45,7 +45,7 @@ namespace RacunarskaGrafika
             //Kreiraj OpenGl svet
             try
             {
-                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\BMW850"), "BMW850.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Lamborgini1"), "Countach.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Lamborgini2"), "MURCIELAGO640.3ds", openGlWorld.Width, openGlWorld.Height);
+                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\RollsRoyce"), "RollsRoyce.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\LEG_CAR_B1"), "LEGO_CAR_B1.3ds", Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\RollsRoyce"), "RollsRoyce.3ds", openGlWorld.Width, openGlWorld.Height);
             }
             catch (Exception ex)
             {
@@ -90,13 +90,17 @@ namespace RacunarskaGrafika
         {
             switch (e.KeyCode)
             {
-                case Keys.F10: this.Close(); break;
-                case Keys.W: if (m_world.RotationX == 360) { m_world.RotationX = 0; } m_world.RotationX += 5.0f; break;
-                case Keys.S: if (m_world.RotationX == -360) { m_world.RotationX = 0; } m_world.RotationX -= 5.0f; break;
-                case Keys.A: if (m_world.RotationY == 360) { m_world.RotationY = 0; } m_world.RotationY += 5.0f; break;
-                case Keys.D: if (m_world.RotationY == 360) { m_world.RotationY = 0; } m_world.RotationY -= 5.0f; break;
+                case Keys.Q: Dispose(); break;
+                case Keys.I: if (e.Control) m_world.PositionZ -= 0.1f; else m_world.RotationX -= 5.0f; break;
+                case Keys.K:  if (e.Control) m_world.PositionZ += 0.1f; else m_world.RotationX += 5.0f; break;
+                case Keys.J: m_world.RotationY -= 5.0f; break;
+                case Keys.L: m_world.RotationY += 5.0f; break;
+                case Keys.Add: if (-m_world.SceneDistance < -100) m_world.SceneDistance -= 5; break;
+                case Keys.Subtract: if (-m_world.SceneDistance > -2000) m_world.SceneDistance += 5; break;
             }
 
+            if (m_world.PositionZ < -0.8f) m_world.PositionZ = -0.8f;
+            else if (m_world.PositionZ > 3.0f) m_world.PositionZ = 3.0f;
             openGlWorld.Refresh();
             m_world.Resize();
         }
@@ -107,5 +111,9 @@ namespace RacunarskaGrafika
             openGlWorld.Refresh();
             m_world.Resize();
         }
+
+
+
+
     }
 }

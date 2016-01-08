@@ -18,9 +18,6 @@ C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\AssimpNetSample.exe
 C:\Users\authorit0\Downloads\PF1S5.2\obj\x86\Debug\AssimpNetSample.pdb
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\AssimpNetSample.exe
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\obj\x86\Debug\AssimpNetSample.pdb
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\BMW850\BMW850.3ds
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lamborgini1\Countach.3ds
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Lamborgini2\MURCIELAGO640.3ds
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\AssimpNetSample.exe
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\AssimpNetSample.pdb
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\AssimpNet.dll
@@ -41,3 +38,27 @@ D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\P
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\steet.jpg
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\ground_texture895.jpg
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\images\brickStone.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\RollsRoyce\RollsRoyceBack.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\RollsRoyce\RollsRoyceFront.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\RollsRoyce\RollsRoyceWheelA.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\RollsRoyce\RollsRoyceWheelB.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\LEG_CAR_B1\LEGO_CAR_B1.mtl
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\LEG_CAR_B1\LEGO_CAR_B1.obj
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\LEG_CAR_B1\LEGO_CAR_B1.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\RollsRoyce\RollsRoyce.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\11081-normal.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\29034.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\AR8-CF-796_c-600x600.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\back.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\Carbonfiber.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\discbrake_alpha.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\Grill_alpha.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\Pedals.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\r8_nav.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_trail_light.jpeg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\thief-number-plate.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.blend
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.mtl
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\R8_14blend.obj
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\R8AUDI\zmwgznhn7p4w-RollsRoyce_GabrielSDJ.rar
