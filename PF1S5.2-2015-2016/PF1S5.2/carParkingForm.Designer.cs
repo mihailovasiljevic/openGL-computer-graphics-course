@@ -45,7 +45,7 @@
             this.lblIzborBoje = new System.Windows.Forms.Label();
             this.lblVertikalniStubiic = new System.Windows.Forms.Label();
             this.tbVisinaStubica = new System.Windows.Forms.TrackBar();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -123,6 +123,7 @@
             this.tbPomeriDrugi.Name = "tbPomeriDrugi";
             this.tbPomeriDrugi.Size = new System.Drawing.Size(87, 45);
             this.tbPomeriDrugi.TabIndex = 11;
+            this.tbPomeriDrugi.Scroll += new System.EventHandler(this.tbPomeriDrugi_Scroll);
             // 
             // lblPomeriDrugi
             // 
@@ -139,6 +140,7 @@
             this.tbPomeriPrvi.Name = "tbPomeriPrvi";
             this.tbPomeriPrvi.Size = new System.Drawing.Size(87, 45);
             this.tbPomeriPrvi.TabIndex = 9;
+            this.tbPomeriPrvi.Scroll += new System.EventHandler(this.tbPomeriPrvi_Scroll);
             // 
             // lblPomeriPrvi
             // 
@@ -182,10 +184,11 @@
             this.btnIzborBoje.TabIndex = 4;
             this.btnIzborBoje.Text = "Izaberi boju";
             this.btnIzborBoje.UseVisualStyleBackColor = true;
+            this.btnIzborBoje.Click += new System.EventHandler(this.btnIzborBoje_Click);
             // 
             // pnlIzborBOje
             // 
-            this.pnlIzborBOje.BackColor = System.Drawing.Color.White;
+            this.pnlIzborBOje.BackColor = System.Drawing.Color.Yellow;
             this.pnlIzborBOje.Location = new System.Drawing.Point(25, 149);
             this.pnlIzborBOje.Name = "pnlIzborBOje";
             this.pnlIzborBOje.Size = new System.Drawing.Size(26, 24);
@@ -246,7 +249,7 @@
         private System.Windows.Forms.TrackBar tbVisinaStubica;
         private System.Windows.Forms.Label lblIzborBoje;
         private System.Windows.Forms.Panel pnlIzborBOje;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnIzborBoje;
         private System.Windows.Forms.Panel panel2;

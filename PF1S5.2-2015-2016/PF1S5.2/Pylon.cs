@@ -122,16 +122,22 @@ namespace RacunarskaGrafika
         {
             Glu.GLUquadric gluCylinderObject = Glu.gluNewQuadric();
             Glu.GLUquadric gluDiskObject = Glu.gluNewQuadric();
+            Glu.GLUquadric gluLightSphere = Glu.gluNewQuadric();
+
             Gl.glPushMatrix();
             Glu.gluCylinder(gluCylinderObject, m_bottomBase, m_topBase, m_height, 128, 128);
 
-            Gl.glTranslatef(0.0f, 0.0f,-1.0f );                              //transliraj prsten za duzinu stubica prema posmatracu da vi mu stojao na vrhu
+            Gl.glTranslatef(0.0f, 0.0f,0.0f );                              //transliraj prsten za duzinu stubica prema posmatracu da vi mu stojao na vrhu
             Gl.glRotatef(180.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(0, 191, 255);
-            Glu.gluDisk(gluDiskObject, m_innerRadius/4, m_outerRadius/4, 128, 128);
+            Glu.gluDisk(gluDiskObject, m_innerRadius/4, m_topBase, 128, 128);
+            Gl.glTranslatef(0.0f, 0.0f, 5.0f);
+            Gl.glColor3ub(255, 0, 0);
+            Glu.gluSphere(gluLightSphere, m_innerRadius, 24, 24);
             Gl.glPopMatrix();
             Glu.gluDeleteQuadric(gluCylinderObject);
             Glu.gluDeleteQuadric(gluDiskObject);
+            Glu.gluDeleteQuadric(gluLightSphere);
         }
     }
 }

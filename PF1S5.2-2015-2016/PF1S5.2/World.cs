@@ -284,9 +284,9 @@ namespace RacunarskaGrafika
         /// <param name="height">Sirina OpenGL kontrole u pikselima.</param>
         public World(String bmwPath, String bmwFileName, String lamborgini1Path, String lamborgini1FileName, String lamborgini2Path, String lamborgini2FileName, int width, int height)
         {
-             this.m_bmw = new AssimpScene(bmwPath, bmwFileName);
-             this.m_lamborgini1 = new AssimpScene(lamborgini1Path, lamborgini1FileName);
-            this.m_lamborgini2 = new AssimpScene(lamborgini2Path, lamborgini2FileName);
+          //   this.m_bmw = new AssimpScene(bmwPath, bmwFileName);
+         //    this.m_lamborgini1 = new AssimpScene(lamborgini1Path, lamborgini1FileName);
+          //  this.m_lamborgini2 = new AssimpScene(lamborgini2Path, lamborgini2FileName);
             this.m_height = height;
             this.m_width = width;
             this.pylonHeight = 0;
@@ -343,7 +343,7 @@ namespace RacunarskaGrafika
             DrawParking(); // iscrtaj parking
             // TODO 6: Modelovati zidove oko parkinga, koristeći instance Box klase
             DrawWalls(); //iscrtaj zidove
-           DrawModels(); //iscrtaj modele automobila
+        //   DrawModels(); //iscrtaj modele automobila
             
             // TODO 7: tri vertikalna stubića na ulasku na parking, koristeći gluCylinder i gluDisk objekte
             DrawPylons();
@@ -501,6 +501,7 @@ namespace RacunarskaGrafika
             //
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
             Gl.glLoadIdentity();
+
         }
 
         private void DrawBase()
@@ -747,8 +748,9 @@ namespace RacunarskaGrafika
             Glu.gluDeleteQuadric(gluSphere);
 
         }
+        public Color ambientColor = Color.FromArgb(1, 255, 255, 0);
         private static float[] parkingLightSourcePosition = { 300.0f, 400.0f, 200.0f, 1.0f };
-        private static float[] parkingLightSourceColor = { 1.0f, 1.0f, 0.0f, 1.0f }; // bela boja
+        public static float[] parkingLightSourceColor = { 1.0f, 1.0f, 0.0f, 1.0f }; // zuta boja
         private void drawParkingLightSource()
         {
             // Postavi svetlosni izvor na poziciju lightBulbPoistion
@@ -765,7 +767,7 @@ namespace RacunarskaGrafika
 
             Gl.glTranslatef(parkingLightSourcePosition[0], parkingLightSourcePosition[1], parkingLightSourcePosition[2]);
 
-            Gl.glColor3ub(255, 255, 0);
+            Gl.glColor3f(parkingLightSourceColor[0], parkingLightSourceColor[1], parkingLightSourceColor[2]);
             Glu.gluSphere(gluSphere, 20.0f, 24, 24);
 
             Gl.glEnable(Gl.GL_LIGHTING);
@@ -784,9 +786,9 @@ namespace RacunarskaGrafika
             }
 
             // Oslobodi unmanaged resurse
-            m_bmw.Dispose();
-           m_lamborgini1.Dispose();
-           m_lamborgini2.Dispose();
+        //    m_bmw.Dispose();
+      //     m_lamborgini1.Dispose();
+       //    m_lamborgini2.Dispose();
             m_font.Dispose();
             Terminate();
         }

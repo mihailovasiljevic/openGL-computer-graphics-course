@@ -95,8 +95,8 @@ namespace RacunarskaGrafika
                 case Keys.K:  if (e.Control) m_world.PositionZ += 0.1f; else m_world.RotationX += 5.0f; break;
                 case Keys.J: m_world.RotationY -= 5.0f; break;
                 case Keys.L: m_world.RotationY += 5.0f; break;
-                case Keys.Add: if (-m_world.SceneDistance < -100) m_world.SceneDistance -= 5; break;
-                case Keys.Subtract: if (-m_world.SceneDistance > -2000) m_world.SceneDistance += 5; break;
+                case Keys.Add: if (-m_world.SceneDistance < -100) m_world.SceneDistance -= 50; break;
+                case Keys.Subtract: if (-m_world.SceneDistance > -2000) m_world.SceneDistance += 50; break;
             }
 
             if (m_world.PositionZ < -0.8f) m_world.PositionZ = -0.8f;
@@ -112,8 +112,29 @@ namespace RacunarskaGrafika
             m_world.Resize();
         }
 
+        private void btnIzborBoje_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = colorDialog.ShowDialog();
+            if(dr == DialogResult.OK)
+            {
+                World.parkingLightSourceColor[0] = colorDialog.Color.R/255;
+                World.parkingLightSourceColor[1] = colorDialog.Color.G / 255;
+                World.parkingLightSourceColor[2] = colorDialog.Color.B / 255;
+                pnlIzborBOje.BackColor = colorDialog.Color;
+                m_world.Resize();
 
 
+            }
+        }
 
+        private void tbPomeriPrvi_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPomeriDrugi_Scroll(object sender, EventArgs e)
+        {
+
+        }
     }
 }
