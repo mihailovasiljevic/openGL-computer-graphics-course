@@ -30,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.openGlWorld = new Tao.Platform.Windows.SimpleOpenGlControl();
             this.btnPonistiSveIzmene = new System.Windows.Forms.Button();
@@ -46,6 +47,10 @@
             this.lblVertikalniStubiic = new System.Windows.Forms.Label();
             this.tbVisinaStubica = new System.Windows.Forms.TrackBar();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.carParkingTimer = new System.Windows.Forms.Timer(this.components);
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.trackBar3 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,6 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbPomeriDrugi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPomeriPrvi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbVisinaStubica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -67,6 +75,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.trackBar3);
+            this.splitContainer1.Panel2.Controls.Add(this.trackBar2);
+            this.splitContainer1.Panel2.Controls.Add(this.trackBar1);
             this.splitContainer1.Panel2.Controls.Add(this.btnPonistiSveIzmene);
             this.splitContainer1.Panel2.Controls.Add(this.tbPomeriDrugi);
             this.splitContainer1.Panel2.Controls.Add(this.lblPomeriDrugi);
@@ -220,6 +231,37 @@
             this.tbVisinaStubica.TabIndex = 0;
             this.tbVisinaStubica.Scroll += new System.EventHandler(this.tbVisinaStubica_Scroll);
             // 
+            // carParkingTimer
+            // 
+            this.carParkingTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(25, 418);
+            this.trackBar1.Maximum = 35;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(166, 45);
+            this.trackBar1.TabIndex = 13;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(25, 469);
+            this.trackBar2.Maximum = 35;
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(166, 45);
+            this.trackBar2.TabIndex = 14;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
+            // 
+            // trackBar3
+            // 
+            this.trackBar3.Location = new System.Drawing.Point(25, 367);
+            this.trackBar3.Maximum = 35;
+            this.trackBar3.Name = "trackBar3";
+            this.trackBar3.Size = new System.Drawing.Size(166, 45);
+            this.trackBar3.TabIndex = 15;
+            this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
+            // 
             // carParkingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +279,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbPomeriDrugi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPomeriPrvi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbVisinaStubica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,6 +304,10 @@
         private System.Windows.Forms.Label lblPomeriPrvi;
         private System.Windows.Forms.Label lblPomeranjeAutomobila;
         private System.Windows.Forms.Button btnPonistiSveIzmene;
+        private System.Windows.Forms.Timer carParkingTimer;
+        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar trackBar3;
     }
 }
 

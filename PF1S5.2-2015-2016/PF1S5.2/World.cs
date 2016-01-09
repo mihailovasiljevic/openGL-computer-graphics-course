@@ -27,6 +27,11 @@ namespace RacunarskaGrafika
     public class World : IDisposable
     {
         #region Atributi
+        //auto koji se parkira
+        private float carPositionX;
+        private float carPositionY;
+        private float carPositionZ;
+        private float carRotationAngle;
 
         /// <summary>
         ///	 Visina vertikalnih stubica.
@@ -115,10 +120,45 @@ namespace RacunarskaGrafika
         /// </summary>
         private float m_zPosition = -60.0f;
 
-
+        //koordinate uparkiranih automobila
+        private float firstX = -380f;
+        private float secondX = 330f;
         #endregion
 
         #region Properties
+
+        public float CarPositionX
+        {
+            get { return carPositionX; }
+            set { carPositionX = value; }
+        }
+        public float CarPositionY
+        {
+            get { return carPositionY; }
+            set { carPositionY = value; }
+        }
+        public float CarPositionZ
+        {
+            get { return carPositionZ; }
+            set { carPositionZ = value; }
+        }
+        public float CarRotationAngle
+        {
+            get { return carRotationAngle; }
+            set { carRotationAngle = value; }
+        }
+
+        public float FirstX
+        {
+            get { return firstX; }
+            set { firstX = value; }
+        }
+
+        public float SecondX
+        {
+            get { return secondX; }
+            set { secondX = value; }
+        }
 
         /// <summary>
         ///	 Visina vertikalnih stubica.
@@ -284,9 +324,9 @@ namespace RacunarskaGrafika
         /// <param name="height">Sirina OpenGL kontrole u pikselima.</param>
         public World(String bmwPath, String bmwFileName, String lamborgini1Path, String lamborgini1FileName, String lamborgini2Path, String lamborgini2FileName, int width, int height)
         {
-          //   this.m_bmw = new AssimpScene(bmwPath, bmwFileName);
-         //    this.m_lamborgini1 = new AssimpScene(lamborgini1Path, lamborgini1FileName);
-          //  this.m_lamborgini2 = new AssimpScene(lamborgini2Path, lamborgini2FileName);
+            this.m_bmw = new AssimpScene(bmwPath, bmwFileName);
+          this.m_lamborgini1 = new AssimpScene(lamborgini1Path, lamborgini1FileName);
+            this.m_lamborgini2 = new AssimpScene(lamborgini2Path, lamborgini2FileName);
             this.m_height = height;
             this.m_width = width;
             this.pylonHeight = 0;
@@ -300,6 +340,10 @@ namespace RacunarskaGrafika
                 MessageBox.Show("Neuspesno kreirana instanca OpenGL fonta", "GRESKA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            this.carPositionX = -330.0f;
+            this.carPositionY = 60.0f;
+            this.carPositionZ = 750.0f;
+            this.carRotationAngle = 180.0f;
 
             //Korisnicka inicijalizacija OpenGL parametara
             Initialize();
@@ -330,7 +374,7 @@ namespace RacunarskaGrafika
             // Pomeraj objekat po z-osi
             Gl.glPushMatrix();
             // Kamera
-            Glu.gluLookAt(m_sceneDistance / 1.5, m_sceneDistance/1.5, -m_sceneDistance*1.5, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f);
+            Glu.gluLookAt(m_sceneDistance / 3, m_sceneDistance/3, -m_sceneDistance*1.5, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f);
 
             Gl.glTranslatef(0.0f, 0.0f, -m_sceneDistance);
             Gl.glRotatef(m_xRotation+15, 1.0f, 0.0f, 0.0f); //+5
@@ -343,7 +387,7 @@ namespace RacunarskaGrafika
             DrawParking(); // iscrtaj parking
             // TODO 6: Modelovati zidove oko parkinga, koristeći instance Box klase
             DrawWalls(); //iscrtaj zidove
-        //   DrawModels(); //iscrtaj modele automobila
+            DrawModels(); //iscrtaj modele automobila
             
             // TODO 7: tri vertikalna stubića na ulasku na parking, koristeći gluCylinder i gluDisk objekte
             DrawPylons();
@@ -465,7 +509,7 @@ namespace RacunarskaGrafika
             }
 
             //TODO 2.9 Definisati reflektorski svetlosni izvor (cut-off=35º) žute boje iznad uparkiranih automobila
-            float[] smer = { 0.0f, -1.0f, 0.0f };
+            float[] smer = { 0.0f, 0.0f, -1.0f };
             Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_SPOT_DIRECTION, smer);
             Gl.glLightf(Gl.GL_LIGHT1, Gl.GL_SPOT_CUTOFF, 35.0f);
             Gl.glEnable(Gl.GL_LIGHT1);
@@ -632,7 +676,7 @@ namespace RacunarskaGrafika
             Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_MODULATE);
             //iscrtaj BMW850
             Gl.glPushMatrix();
-            Gl.glTranslatef(-380f, 20.0f, 10.0f); // udalji objekat od kamere da bi se video ceo
+            Gl.glTranslatef(firstX, 20.0f, 10.0f); // udalji objekat od kamere da bi se video ceo
             Gl.glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
             Gl.glScalef(45f, 45f,45f);
             m_bmw.Draw();
@@ -640,7 +684,7 @@ namespace RacunarskaGrafika
 
             //iscrtaj Lamborgini Countach
             Gl.glPushMatrix();
-            Gl.glTranslatef(330f, 20.0f, 220.0f); // udalji objekat od kamere da bi se video ceo
+            Gl.glTranslatef(secondX, 20.0f, 220.0f); // udalji objekat od kamere da bi se video ceo
             Gl.glRotatef(0.0f, 0.0f, 1.0f, 0.0f);
             Gl.glScalef(0.6f, 0.6f, 0.6f);
             m_lamborgini1.Draw();
@@ -648,9 +692,9 @@ namespace RacunarskaGrafika
 
             //iscrtaj Lamborgini Murcielago 640
             Gl.glPushMatrix();
-            Gl.glTranslatef(-330f, 60f, 150f); // udalji objekat od kamere da bi se video ceo
-            Gl.glRotatef(180.0f, 0.0f, 1.0f, 0.0f);
-            Gl.glScalef(1.3f,1.3f, 1.3f);
+            Gl.glTranslatef(carPositionX, carPositionY, carPositionZ); // udalji objekat od kamere da bi se video ceo
+            Gl.glRotatef(carRotationAngle, 0.0f, 1.0f, 0.0f);
+            Gl.glScalef(60f,60f, 60f);
             m_lamborgini2.Draw();
             Gl.glPopMatrix();
             Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_ADD);
@@ -659,7 +703,7 @@ namespace RacunarskaGrafika
         private void DrawPylons()
         {
             Gl.glPushMatrix();
-            Gl.glTranslatef(0.0f, pylonHeight + 12, 0.0f);
+            Gl.glTranslatef(0.0f, pylonHeight + 12, 70.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
             Pylon leftPylon = new Pylon(10, 10, pylonHeight, 5, 60);
@@ -667,7 +711,7 @@ namespace RacunarskaGrafika
             Gl.glPopMatrix();
 
             Gl.glPushMatrix();
-            Gl.glTranslatef(0.0f, pylonHeight +12, 250.0f);
+            Gl.glTranslatef(0.0f, pylonHeight +12, 240.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
             Pylon centerPylon = new Pylon(10, 10, pylonHeight, 5, 60);
@@ -675,7 +719,7 @@ namespace RacunarskaGrafika
             Gl.glPopMatrix();
 
             Gl.glPushMatrix();
-            Gl.glTranslatef(0.0f, pylonHeight + 12, 460.0f);
+            Gl.glTranslatef(0.0f, pylonHeight + 12, 410.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
             Pylon rightPylon = new Pylon(10, 10, pylonHeight, 5, 60);
@@ -786,12 +830,54 @@ namespace RacunarskaGrafika
             }
 
             // Oslobodi unmanaged resurse
-        //    m_bmw.Dispose();
-      //     m_lamborgini1.Dispose();
-       //    m_lamborgini2.Dispose();
+            m_bmw.Dispose();
+           m_lamborgini1.Dispose();
+           m_lamborgini2.Dispose();
             m_font.Dispose();
             Terminate();
         }
+
+
+        /// <summary>
+        ///  Metoda azurira pozicije objekata.
+        /// </summary>
+        /// <param name="value">Vrednost koja predstavlja preostali broj frejmova animacije</param>
+        public void Update(long value)
+        {
+            /*
+            // Animacija sletanja broda
+            if (value > 20)
+            {
+                m_ship.PositionZ += 0.075f;
+                m_ship.PositionY -= 0.005f;
+                m_ship.PositionX += 0.03f;
+
+                m_ship.RotationZ += 0.75f;
+                m_ship.Scale += 0.2f;
+            }
+            else
+            {
+                if (value > 0)
+                {
+                    m_ship.PositionY -= 0.05f; // spustamo brod ispred kuce
+                }
+            }
+
+            // Animacija promene svetla prozora
+            m_deltaTexture -= 0.05f;
+
+            if (m_deltaColor == (byte)0)
+            {
+                m_deltaColor = (byte)100;
+            }
+            else
+            {
+                m_deltaColor = (byte)0;
+            }
+            */
+        }
+
+
 
         #endregion
 

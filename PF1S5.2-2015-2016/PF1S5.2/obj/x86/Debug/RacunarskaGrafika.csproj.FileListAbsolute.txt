@@ -116,22 +116,97 @@ D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\P
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\ch12_14_back 2.jpg
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\ch12_34.jpg
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\Nomer.png
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\bumper_frame.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\buttons.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\CHROME_BODY.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\chrome_hard.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.3ds
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.mtl
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.obj
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari_Logo.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Freio(2).tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\gauge_monitor.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\grill.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\interior_lod0.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\km.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\lights.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\nodamage.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\tire.tga
-D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\undercarriage.tga
 D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\M5\Car BMW M5 N071210.3DS
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\aaa.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\archibase.net.txt
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\GTR_c.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\GTR_d.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\nissan skyline gtr (bnr34).jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\Car nissan skyline gtr (bnr34) N080615.3DS
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\Car nissan skyline gtr (bnr34) N080615.gsm
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\Car nissan skyline gtr (bnr34) N080615.max
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\GTR.fbx
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\GTR34\GTR_c.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\GTR34\GTR_d.png
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Nissan\GTR34\GTR.fbx
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\00066_g.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\archibase.net.txt
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\cloth_134_fabric_gloss.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\Leather 800 x 500 px er.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\Car N170814.3DS
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\Car N170814.FBX
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\Car N170814.gsm
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\N17\Car N170814.max
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\1.JPG
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\2.JPG
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\3.JPG
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\4.JPG
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\458italia.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\boutonsv.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\buttons.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\comptour.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\feuxblanc2.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\freinff.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Freio(2).jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\grill.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\grill_alpha.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\jantelogo.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\km.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\lights.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\monitor.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\moquette.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\nauto.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\nodamage.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\pedale1.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\pedale2.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\readme.txt
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\volant2.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\warning.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\.DS_Store
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.lwo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Ferrari 458 Italia.lxo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Scene Ferrari 458 b.lws
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Scene Ferrari 458.lws
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Italia\Sol.lwo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\AS2_carpaint_metallic.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\AS2__glass_bump_05.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Pneus bump.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\DH_317LL.HDR
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Maybach Exelero.3ds
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Maybach Exelero.c4d
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Maybach Exelero.dxf
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Maybach Exelero.lwo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Maybach Exelero.max
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Maybach Exelero.mtl
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Maybach\Maybach Exelero.obj
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\light.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\meter.jpg
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\readme.txt
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\Untitled.JPG
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\.DS_Store
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\brake.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\Mclaren_F1_LM.lwo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\side.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\Tire_Side_F.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\Tire_Side_R.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\window.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\McLaren\wing.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\234307--27048016-.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\bumper_frame.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\carbonfiber.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\engine.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\grille1_alpha.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\interior_lod0.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\lights_lod0.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\nodamage_lod0.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\skyxn.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\sls_amg.lwo
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\sls_amg.max
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\sls_amg.mb
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\sls_amg.mtl
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\sls_amg.obj
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\sls_interior.tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\tire(3).tga
+D:\Projects\ComputerGraphics\openGL-computer-graphics-course\PF1S5.2-2015-2016\PF1S5.2\bin\Debug\3D Models\Mercedes\undercarriage.tga
