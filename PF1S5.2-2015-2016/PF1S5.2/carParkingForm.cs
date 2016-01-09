@@ -150,17 +150,7 @@ namespace RacunarskaGrafika
                 case Keys.L: if (animation == true) return; m_world.RotationY += 5.0f; break;
                 case Keys.Add: if (animation == true) return; if (-m_world.SceneDistance < -100) m_world.SceneDistance -= 50; break;
                 case Keys.Subtract: if (animation == true) return; if (-m_world.SceneDistance > -25000) m_world.SceneDistance += 50; break;
-                case Keys.P: animation = true; allControlsChange(false); carParkingTimer.Start();
-                    TimeSpan timeout = TimeSpan.FromSeconds(1);
-                    DateTime start_time = DateTime.Now;
-
-                    while (DateTime.Now - start_time < timeout)
-                    {
-                        //something is happening, just loop waiting
-                    }
-                    allControlsChange(true); animation = false;
-
-                    break;
+                case Keys.P: animation = true; allControlsChange(false); carParkingTimer.Start(); break;
             }
 
             if (m_world.PositionZ < -0.8f) m_world.PositionZ = -0.8f;
@@ -172,6 +162,22 @@ namespace RacunarskaGrafika
         private void timer1_Tick(object sender, EventArgs e)
         {
             // Azuriraj svet i smanji trajanje
+            if(m_duration == 0)
+            {
+                allControlsChange(true);
+                animation = false;
+                m_world.CarPositionX = World.oldCarPositionX;
+                m_world.CarPositionY = World.oldCarPositionY;
+                m_world.CarPositionZ = World.oldCarPositionZ;
+                m_world.CarRotationAngle = World.oldCarRotationAngle;
+                m_world.PylonColor = World.oldColor;
+                m_world.TurnOnLight = false;
+                m_duration = 120;
+                carParkingTimer.Stop();
+                //openGlWorld.Refresh();
+                m_world.Resize();
+                return;
+            }
             m_world.Update(--m_duration);
 
             // Ponovo iscrtaj kontrolu
@@ -183,7 +189,7 @@ namespace RacunarskaGrafika
             foreach (Control c in this.Controls)
             {
                 c.Enabled = enabled;
-                c.Visible = enabled;
+
             }
         }
 

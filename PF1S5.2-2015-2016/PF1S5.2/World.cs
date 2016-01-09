@@ -27,11 +27,20 @@ namespace RacunarskaGrafika
     public class World : IDisposable
     {
         #region Atributi
+        //pylon light
+        private Color color;
+        public static Color oldColor = Color.FromArgb(255, 0, 0);
+        private bool turnOnLight = false;
         //auto koji se parkira
         private float carPositionX;
         private float carPositionY;
         private float carPositionZ;
         private float carRotationAngle;
+
+        public static float oldCarPositionX = -330.0f;
+        public static float oldCarPositionY = 60.0f;
+        public static float oldCarPositionZ = 750.0f;
+        public static float oldCarRotationAngle = 180.0f;
 
         /// <summary>
         ///	 Visina vertikalnih stubica.
@@ -126,6 +135,18 @@ namespace RacunarskaGrafika
         #endregion
 
         #region Properties
+
+        public Color PylonColor
+        {
+            get { return color; }
+            set { color = value; }
+        }
+        public bool TurnOnLight
+        {
+            get { return turnOnLight; }
+            set { turnOnLight = value; }
+        }
+
 
         public float CarPositionX
         {
@@ -510,9 +531,25 @@ namespace RacunarskaGrafika
 
             //TODO 2.9 Definisati reflektorski svetlosni izvor (cut-off=35º) žute boje iznad uparkiranih automobila
             float[] smer = { 0.0f, 0.0f, -1.0f };
+            Gl.glEnable(Gl.GL_LIGHT1);
             Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_SPOT_DIRECTION, smer);
             Gl.glLightf(Gl.GL_LIGHT1, Gl.GL_SPOT_CUTOFF, 35.0f);
-            Gl.glEnable(Gl.GL_LIGHT1);
+
+
+            
+            Gl.glLightfv(Gl.GL_LIGHT2, Gl.GL_AMBIENT, ambient);
+            Gl.glLightfv(Gl.GL_LIGHT2, Gl.GL_DIFFUSE, diffuse);
+            Gl.glLightf(Gl.GL_LIGHT2, Gl.GL_SPOT_CUTOFF, 180.0f);
+
+
+            Gl.glLightfv(Gl.GL_LIGHT3, Gl.GL_AMBIENT, ambient);
+            Gl.glLightfv(Gl.GL_LIGHT3, Gl.GL_DIFFUSE, diffuse);
+            Gl.glLightf(Gl.GL_LIGHT3, Gl.GL_SPOT_CUTOFF, 180.0f);
+
+
+            Gl.glLightfv(Gl.GL_LIGHT4, Gl.GL_AMBIENT, ambient);
+            Gl.glLightfv(Gl.GL_LIGHT4, Gl.GL_DIFFUSE, diffuse);
+            Gl.glLightf(Gl.GL_LIGHT4, Gl.GL_SPOT_CUTOFF, 180.0f);
         }
 
 
@@ -706,7 +743,7 @@ namespace RacunarskaGrafika
             Gl.glTranslatef(0.0f, pylonHeight + 12, 70.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
-            Pylon leftPylon = new Pylon(10, 10, pylonHeight, 5, 60);
+            Pylon leftPylon = new Pylon(10, 10, pylonHeight, 5, 60, color, turnOnLight);
             leftPylon.Draw();
             Gl.glPopMatrix();
 
@@ -714,7 +751,7 @@ namespace RacunarskaGrafika
             Gl.glTranslatef(0.0f, pylonHeight +12, 240.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
-            Pylon centerPylon = new Pylon(10, 10, pylonHeight, 5, 60);
+            Pylon centerPylon = new Pylon(10, 10, pylonHeight, 5, 60, color, turnOnLight);
             centerPylon.Draw();
             Gl.glPopMatrix();
 
@@ -722,7 +759,7 @@ namespace RacunarskaGrafika
             Gl.glTranslatef(0.0f, pylonHeight + 12, 410.0f);
             Gl.glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
             Gl.glColor3ub(255, 255, 0); // zuta boja
-            Pylon rightPylon = new Pylon(10, 10, pylonHeight, 5, 60);
+            Pylon rightPylon = new Pylon(10, 10, pylonHeight, 5, 60, color, turnOnLight);
             rightPylon.Draw();
             Gl.glPopMatrix();
         }
@@ -844,6 +881,79 @@ namespace RacunarskaGrafika
         /// <param name="value">Vrednost koja predstavlja preostali broj frejmova animacije</param>
         public void Update(long value)
         {
+            float currPos = carPositionZ;
+            float wantedPos = 110.0f;
+            float move = carPositionZ - wantedPos;
+            float stepMove = move / 25;
+            if (value > 80)
+            {
+                if (carPositionZ > 90.0f)
+                    carPositionZ += -stepMove;
+
+                else
+                    carPositionZ = 90.0f;
+            }
+            else
+            {
+                if (carPositionZ > 90)
+                    carPositionZ = 90;
+                if (value > 60)
+                {
+                    if (carRotationAngle > 90.0f)
+                    {
+                        carRotationAngle -= 10;
+                        if (carPositionX < -130)
+                            carPositionX += 30;
+                        else
+                            carPositionX = -130;
+                    }
+                    else
+                        carRotationAngle = 90.0f;
+                }
+                else
+                {
+                    if (value > 40)
+                    {
+                        carPositionX = -130;
+                        if (pylonHeight > 0)
+                        {
+                            pylonHeight -= 6;
+                            if (value % 2 == 0)
+                            {
+                                color = Color.FromArgb(255, 0, 0);
+                                turnOnLight = true;
+                            }
+                            else
+                            {
+                                color = Color.FromArgb(255, 255, 255);
+                                turnOnLight = false;
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        if (value > 20)
+                        {
+                            pylonHeight = 0;
+                            if (carPositionX < 270)
+                            {
+                                carPositionX += 20;
+                            }
+                            else
+                            {
+                                carPositionX = 270;
+                            }
+                        }
+                        else
+                        {
+                            if (pylonHeight < 60)
+                                pylonHeight += 6;
+                        }
+                    }
+                }
+            }
+
             /*
             // Animacija sletanja broda
             if (value > 20)

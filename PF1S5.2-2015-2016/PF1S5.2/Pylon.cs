@@ -39,7 +39,8 @@ namespace RacunarskaGrafika
         /// </summary>
         double m_outerRadius = 1.0;
 
-
+        System.Drawing.Color color;
+        bool turnOnLight;
         #endregion Atributi
 
         #region Properties
@@ -107,13 +108,15 @@ namespace RacunarskaGrafika
         /// <param name="width">Sirina kvadra.</param>
         /// <param name="height">Visina kvadra.</param>
         /// <param name="depth"></param>
-        public Pylon(double topBase, double bottomBase, float height, double innerRadius, double outerRadius)
+        public Pylon(double topBase, double bottomBase, float height, double innerRadius, double outerRadius, System.Drawing.Color color, bool turnOnLight)
         {
             this.m_topBase = topBase;
             this.m_bottomBase = bottomBase;
             this.m_height = height;
             this.m_innerRadius = innerRadius;
             this.m_outerRadius = outerRadius;
+            this.color = color;
+            this.turnOnLight = turnOnLight;
         }
 
         #endregion Konstruktori
@@ -132,7 +135,24 @@ namespace RacunarskaGrafika
             Gl.glColor3ub(0, 191, 255);
             Glu.gluDisk(gluDiskObject, m_innerRadius/4, m_topBase, 128, 128);
             Gl.glTranslatef(0.0f, 0.0f, 5.0f);
-            Gl.glColor3ub(255, 0, 0);
+            float[] pos = { 0.0f, 0.0f, 5.0f, 1.0f };
+            Gl.glLightfv(Gl.GL_LIGHT2, Gl.GL_POSITION, pos);
+            Gl.glLightfv(Gl.GL_LIGHT3, Gl.GL_POSITION, pos);
+            Gl.glLightfv(Gl.GL_LIGHT4, Gl.GL_POSITION, pos);
+            if (turnOnLight)
+            {
+                Gl.glEnable(Gl.GL_LIGHT2);
+                Gl.glEnable(Gl.GL_LIGHT3);
+                Gl.glEnable(Gl.GL_LIGHT4);
+            }
+            else
+            {
+                Gl.glDisable(Gl.GL_LIGHT2);
+                Gl.glDisable(Gl.GL_LIGHT3);
+                Gl.glDisable(Gl.GL_LIGHT4);
+            }
+            Gl.glColor3ub(color.R, color.G, color.B);
+
             Glu.gluSphere(gluLightSphere, m_innerRadius, 24, 24);
             Gl.glPopMatrix();
             Glu.gluDeleteQuadric(gluCylinderObject);
